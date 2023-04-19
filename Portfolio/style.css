@@ -1,0 +1,348 @@
+@font-face{
+    font-family: "Raleway";
+    src: url(font/Raleway-VariableFont_wght.ttf)
+}
+body{
+    background-color: rgb(0, 43, 56);
+}
+*{
+    scroll-behavior: smooth;
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.scroll_indicador{
+    position: fixed;
+    right: 160px;
+    top: 55%;
+    display: flex;
+    flex-direction: column;
+    
+    transform: translateY(-50%);
+    gap:50px;
+}
+.scroll_indicador::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    background-color: rgb(141, 141, 141);
+}
+.scroll_indicador a{
+    
+    position: relative;
+    padding: 10px;
+}
+.scroll_indicador a::after{
+    border: 2px solid rgb(0, 238, 255);
+    position: absolute;
+    border-radius: 50%;
+    content: '';
+    width: 12px;
+    height:12px;
+    background-color: rgb(0, 43, 56);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.scroll_indicador a.ativado::after{
+    border: none;
+    background-color:rgb(0, 238, 255);
+    transform: translate(-50%,-50%) scale(1.3);
+}
+
+header{
+    top: 0;
+    position: fixed;
+    display: flex;
+    background-color:rgb(0, 30, 39);
+    height: 80px;
+    width: 100%;    
+}
+.allicon{
+    margin-left: 80px;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+
+}
+.icon{
+    position: absolute;
+    -webkit-user-drag: none;
+    width: 100px;
+    margin-bottom: 20px;
+    transition: all 0.8s;
+    
+    
+}
+.icon:hover{
+    transform: translateY(-5px);
+}
+
+.iconname{
+    margin-left: 90px;
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 27px;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+}
+.iconname::before {
+    content: "Port";
+    color: rgb(0, 238, 255);
+  }
+.abas{
+    display: flex;
+    margin: 30px;
+    margin-right: 135px;
+    position: absolute;
+    right:0;
+}
+
+.abas_parte_selecionado{
+    height: 50px;
+    color:rgb(0, 238, 255);
+    text-decoration: none;
+    position: relative;
+}
+.abas_parte{
+    height: 50px;
+    color:white;
+    text-decoration: none;
+    position: relative;
+}
+.estilo_aba{
+    display: flex;
+    background-color: rgb(0, 238, 255);
+    width: 0px;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    margin-left:5px;
+    
+}
+
+.abas_parte_selecionado:hover .estilo_aba {
+    transition: all 0.4s;
+    width: 88%;
+
+}
+.abas_parte_selecionado .estilo_aba{
+    transition: all 0.4s;
+    width: 50%;
+}
+.abas_parte_selecionado:hover .estilo_aba{
+    transition: all 0.4s;
+    width: 88%;
+
+}
+
+/*
+parte de seção ---------->>>>
+*/
+.abas_all{
+    margin-inline: 10px;
+}
+section{
+    width: 800px;
+    height: 400px;
+    margin-left: 140px;
+}
+.containerhome{
+    padding-top: 80px;
+}
+h1.hello{
+    color:white;
+    font-size: 50px;
+}
+p.hello_p{
+    color:rgb(202, 202, 202);
+    max-width: 500px;
+    margin-top: 40px;
+   
+}
+button.jornada{
+    transition: all 0.1s;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    background-color: rgb(0, 116, 124);
+    margin-top: 60px;
+    padding-inline: 20px ;
+    padding-block: 10px;
+    cursor: pointer;
+}
+button.jornada:hover{
+    background-color: rgb(0, 89, 95);
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+    
+}
+.bSpan{
+    font-size: 20px;
+    padding-left: 5px;
+}
+/*sessao skill-set ----->>>*/
+.container_habilidades_all{
+    margin-top: 150px;
+  
+
+}
+
+.container_habilidades_title{
+}
+.container_habilidades_title h3{
+    color: white;
+    margin-left: 5px;
+
+}
+.container_habilidades_title h1{
+    color: rgb(0, 238, 255);
+    font-size: 50px;
+    
+}
+
+.container_habilidades_title:hover .skill_des{
+    transition: width 1s ease-in-out;
+    width: 130px;
+}
+.container_habilidades_title .skill_des{
+    transition: width 2s ease-in-out;
+    width: 50px;
+}
+.container_habilidades_title:hover .skill_des{
+    transition: width 1s ease-in-out;
+    width: 130px;
+}
+.skill_des{
+    margin-top: 10px;
+    display: block;
+    content: '';
+    background-color:rgb(0, 238, 255);
+    width: 50px;
+    height: 4px;
+}
+
+/*BLOCOS DE HABILIDADES/ INFOS ---------->>>>>>  */
+
+
+.container_habilidades_serviços{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+    justify-content: center;
+    gap: 90px;
+    grid-gap: 20px;
+}
+.container_serviços{ 
+   
+    width:220px;
+    height: 220px;
+    background-color: rgb(0, 116, 124);
+
+
+}
+.conteudosv{
+    padding: 20px;
+    width:180px;
+    height: 180px;
+
+}
+h5{
+    color: white;
+    padding-bottom: 5px;
+}
+.sv{
+    width: 50px;
+}
+.p_sv{
+    font-size: 12px;
+    color: white;
+    max-height: 100%;
+}
+
+
+/*SESSAO DE CONTATO ! ------------------>>>>>>*/
+
+.container_contato_all{
+    margin-top:300px;
+    position: absolute;
+}
+.container_contato{
+    max-width: 500px;
+    position: relative;
+}
+.h2_contato{
+    font-size: 35px;
+    color: rgb(0, 238, 255);
+    margin-bottom: 30px;
+}
+.contato_input{
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    align-items:center;
+    width: 100%;
+    max-width: 500px;
+    height: 40px;
+    background-color: rgb(0, 116, 124);
+    border: none;
+}
+.contato_input:focus::placeholder {
+    padding-left: -20px;
+  }
+.contato_input::placeholder{
+    font-size: 15px;
+    font-weight:700;
+    color: rgb(0, 55, 58);
+    
+}
+
+.contato_input:valid{
+   padding-left: 20px;
+   font-weight: 600;
+}
+.contato_input:invalid{
+    padding-left: 20px;
+    color: red;
+    font-weight: 600;
+}
+.contato_input:focus {
+    color:black;
+    outline: none;
+    padding:20px;
+    font-weight: 600;
+    transition: margin-bottom 0.5s;
+    margin-bottom: 10px;
+}
+
+.button_contato{
+    font-weight: 800;
+    color: rgb(0, 36, 37);
+    display: flex;
+    border: none;
+    background-color:rgb(0, 238, 255);
+    float:right;
+    margin-top: 20px;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+.seta_button{
+    width: 20px;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+.span_button_contato{
+    margin-top: 12px;
+}
